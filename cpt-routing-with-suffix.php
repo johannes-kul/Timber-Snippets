@@ -8,7 +8,7 @@
 /   Timber Upstatement doesn't support HEAD Request (it may be important for SEO)
 /   If you need still need the HEAD Request, then you need to overwrite Upstatement Class. (Snippet on the way)
 /
-/   Dont forget to swap "your_cpt_slug", "your_term_slug" and "your_template".
+/   Don't forget to swap "your_cpt_slug", "your_term_slug" and "your_template".
 /
 */
 
@@ -17,7 +17,7 @@ addHeadRequest::map('/:term/:name'.'.html', function($params){
 
     # Check if the CPT Name exists
 
-    function get_post_by_name(string $name, string $post_type = "your_cpt_clug") {
+    function get_post_by_name(string $name, string $post_type = "your_cpt_slug") {
         $query = new WP_Query([
             "post_type" => $post_type,
             "name" => $name
