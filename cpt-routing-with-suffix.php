@@ -16,7 +16,7 @@
 addHeadRequest::map('/:term/:name'.'.html', function($params){
 
     # Check if the CPT Name exists
-  
+
     function get_post_by_name(string $name, string $post_type = "your_cpt_clug") {
         $query = new WP_Query([
             "post_type" => $post_type,
@@ -34,7 +34,9 @@ addHeadRequest::map('/:term/:name'.'.html', function($params){
         $query = 'post_type=your_cpt_slug&name='.$params['name']; // CPT Query with requested name
         addHeadRequest::load('your_template.php', null, $query, 200); // Load your Template and send status response code 200
     }
-
+    
     // else = let the 404 do the rest
-  
-  ?>
+    
+});
+
+?>
