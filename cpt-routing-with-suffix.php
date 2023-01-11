@@ -30,7 +30,7 @@ addHeadRequest::map('/:term/:name'.'.html', function($params){
     $post = get_post_by_name($postname); // Load CPT with that name, if it exists
     $termCheck = has_term($term, 'your_term_slug', $post); // Check if that CPT contains requested term
 
-    if($termCheck) { // Show template if the CPT contains requests term
+    if($termCheck) { // Show template if the CPT contains requested term
         $query = 'post_type=your_cpt_slug&name='.$params['name']; // CPT Query with requested name
         addHeadRequest::load('your_template.php', null, $query, 200); // Load your Template and send status response code 200
     }
